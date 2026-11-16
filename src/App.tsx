@@ -12,13 +12,14 @@ import { ServicesPage } from './pages/ServicesPage';
 import { AboutPage } from './pages/AboutPage';
 import { ServiceAreasPage } from './pages/ServiceAreasPage';
 import { FaqPage } from './pages/FaqPage';
+import { BlogPage } from './pages/BlogPage';
 import { ContactPage } from './pages/ContactPage';
 
 export default function App() {
   // Read initial page from hash if present
   const getInitialPage = (): Page => {
     const hash = window.location.hash.replace('#', '') as Page;
-    const validPages: Page[] = ['home', 'services', 'about', 'service-areas', 'faqs', 'contact'];
+    const validPages: Page[] = ['home', 'services', 'about', 'service-areas', 'faqs', 'blog', 'contact'];
     return validPages.includes(hash) ? hash : 'home';
   };
 
@@ -37,6 +38,7 @@ export default function App() {
       about: 'About Paw Care Adelaide | Local Pet Sitting & Care Services',
       'service-areas': 'Adelaide Service Areas | Suburb Coverage | Paw Care Adelaide',
       faqs: 'Frequently Asked Questions | Paw Care Adelaide',
+      blog: 'Pet Care Blog | Dog Walking & Pet Sitting Adelaide | Paw Care Adelaide',
       contact: 'Book a Pet Care Enquiry | Paw Care Adelaide',
     };
 
@@ -47,7 +49,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '') as Page;
-      const validPages: Page[] = ['home', 'services', 'about', 'service-areas', 'faqs', 'contact'];
+      const validPages: Page[] = ['home', 'services', 'about', 'service-areas', 'faqs', 'blog', 'contact'];
       if (validPages.includes(hash)) {
         setCurrentPage(hash);
       }
@@ -99,6 +101,8 @@ export default function App() {
         )}
 
         {currentPage === 'faqs' && <FaqPage onNavigate={handleNavigate} />}
+
+        {currentPage === 'blog' && <BlogPage onNavigate={handleNavigate} />}
 
         {currentPage === 'contact' && (
           <ContactPage

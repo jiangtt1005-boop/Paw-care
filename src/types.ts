@@ -1,4 +1,4 @@
-export type Page = 'home' | 'services' | 'about' | 'service-areas' | 'faqs' | 'contact';
+export type Page = 'home' | 'services' | 'about' | 'service-areas' | 'faqs' | 'blog' | 'contact';
 
 export type ServiceType =
   | 'dog-walking'

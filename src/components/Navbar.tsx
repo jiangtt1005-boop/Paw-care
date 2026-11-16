@@ -15,6 +15,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     { label: 'Services', page: 'services' },
     { label: 'Service Areas', page: 'service-areas' },
     { label: 'About Us', page: 'about' },
+    { label: 'Blog', page: 'blog' },
     { label: 'FAQs', page: 'faqs' },
     { label: 'Contact', page: 'contact' },
   ];
