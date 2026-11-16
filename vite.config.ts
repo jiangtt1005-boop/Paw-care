@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 
 export default defineConfig(({ command }) => {
   return {
-    base: process.env.VITE_BASE_PATH ?? (command === 'build' ? '/Paw Care Adelaide/' : '/'),
+    base: process.env.VITE_BASE_PATH ?? (command === 'build' ? '/Paw-care/' : '/'),
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
