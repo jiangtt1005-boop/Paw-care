@@ -1,0 +1,6 @@
+{
+  "name": "Paw Care Adelaide",
+  "description": "Friendly and convenient local pet care services in Adelaide, South Australia, including dog walking, home pet feeding, basic pet care, and short-term pet sitting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
